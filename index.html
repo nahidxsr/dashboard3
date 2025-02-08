@@ -1,51 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taka Gor BD - Dashboard</title>
-    <link rel="stylesheet" href="styles.css"> <!-- External CSS -->
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
+
+    <!-- Scrolling Notice (Train Effect) -->
+    <div class="notice-container">
+        <div class="notice-track">
+            <span>📢 আমাদের টেলিগ্রাম চ্যানেলে জয়েন করুন - নতুন অফার এবং তথ্য পেতে! |</span>
+            <span> নতুন আপডেট আসছে! সক্রিয় থাকুন! |</span>
+            <span> দ্রুত ইনকাম করুন এবং রেফারাল বোনাস পান! |</span>
+        </div>
+    </div>
+
+    <!-- Header -->
     <header>
         <h1>Taka Gor BD</h1>
-        <h2>User Dashboard</h2>
     </header>
 
-    <main>
-        <!-- User Info Section -->
-        <section id="userInfo">
-            <h3>Welcome, <span id="userName">[User Name]</span></h3>
-            <p>Phone: <span id="userPhone">[User Phone]</span></p>
-            <p>Balance: <span id="userBalance">$0</span></p>
-            <p>Referral Bonus: <span id="userReferralBonus">$0</span></p>
-        </section>
+    <!-- Balance Section -->
+    <section class="balance-section">
+        <h2>আপনার ব্যালেন্স</h2>
+        <p>💰 10,500 ≈ <b>৳105</b></p>
+    </section>
 
-        <!-- Navigation Links -->
-        <section id="dashboardLinks">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="investment.html">Invest Money</a></li>
-                <li><a href="withdraw.html">Withdraw</a></li>
-                <li><a href="profile.html">Edit Profile</a></li>
-            </ul>
-        </section>
+    <!-- Telegram Join -->
+    <section class="telegram-section">
+        <p>📢 আমাদের টেলিগ্রাম চ্যানেলে যোগ দিন</p>
+        <a href="https://t.me/takagorbd" class="join-btn">Join Telegram</a>
+    </section>
 
-        <!-- Activity Section -->
-        <section id="recentActivity">
-            <h3>Recent Activities</h3>
-            <ul>
-                <li>Investment: $50 on 07 Feb 2025</li>
-                <li>Withdrawal: $20 on 05 Feb 2025</li>
-                <li>Referral Bonus: $10 on 04 Feb 2025</li>
-            </ul>
-        </section>
-    </main>
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="#">Withdraw</a>
+        <a href="#">Referral</a>
+        <a href="#">Balance</a>
+        <a href="#">Help Center</a>
+    </nav>
 
-    <footer>
-        <p>&copy; 2025 Taka Gor BD. All rights reserved.</p>
-    </footer>
-
-    <script src="dashboard.js"></script> <!-- External JS -->
+    <script src="dashboard.js"></script>
 </body>
-  </html>
+</html>
