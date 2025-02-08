@@ -1,82 +1,70 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+/* ব্যালেন্স সেকশনের ডিজাইন */
+.balance-section {
+    background: linear-gradient(135deg, #ffe6f2, #ff80b3);
+    padding: 15px;
+    border-radius: 12px;
     text-align: center;
-    background: #fdfdfd;
-    margin: 0;
-    padding: 0;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Scrolling Notice (Train Effect) */
-.notice-container {
+/* ব্যালেন্স লেখা */
+.balance-section p {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+/* ব্যালেন্স আইকন */
+.balance-section p span {
+    font-weight: bold;
+    font-size: 30px;
+    color: #ff0066;
+}
+
+/* উইথড্র বাটন */
+.withdraw-button {
+    background-color: #ff3399;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.withdraw-button:hover {
+    background-color: #cc0066;
+}
+
+/* নোটিশ বোর্ড (ট্রেনের মত স্ক্রলিং) */
+.notice-board {
+    width: 100%;
     overflow: hidden;
-    background: pink;
-    padding: 10px 0;
     white-space: nowrap;
+    background: #ff80b3;
+    padding: 10px 0;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
     position: relative;
 }
 
-.notice-track {
+.notice-board p {
     display: inline-block;
-    white-space: nowrap;
-    animation: marquee 10s linear infinite;
+    padding-left: 100%;
+    animation: marquee 8s linear infinite;
 }
 
+/* স্ক্রলিং এনিমেশন */
 @keyframes marquee {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-}
-
-/* Header */
-header {
-    background: #ff4d79;
-    color: white;
-    padding: 15px;
-    font-size: 24px;
-}
-
-/* Balance Section */
-.balance-section {
-    background: white;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Telegram Join Section */
-.telegram-section {
-    background: white;
-    padding: 20px;
-    margin: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.join-btn {
-    background: #ff4d79;
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-/* Bottom Navigation */
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: white;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.bottom-nav a {
-    text-decoration: none;
-    font-size: 18px;
-    color: black;
-    padding: 10px;
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
