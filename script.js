@@ -1,24 +1,14 @@
-// ইউজারের ব্যালেন্স Local Storage থেকে লোড করা হবে
-document.addEventListener("DOMContentLoaded", function() {
-    let balance = localStorage.getItem("userBalance") || 10500; // ডিফল্ট ব্যালেন্স ১০,৫০০
-    
-    // ব্যালেন্স আপডেট দেখানো হবে
-    document.getElementById("balanceAmount").innerText = balance;
-});
+// 🏦 লোকাল স্টোরেজ থেকে ব্যালেন্স লোড করুন
+let userBalance = localStorage.getItem("balance") || 10500;
+document.querySelector(".balance-section p").innerHTML = `💰 ${userBalance} ≈ <b>৳${userBalance / 100}</b>`;
 
-// ইউজারের ব্যালেন্স আপডেট করতে চাইলে এই ফাংশন ব্যবহার করুন
+// 🚀 ব্যালেন্স আপডেট ফাংশন
 function updateBalance(amount) {
-    localStorage.setItem("userBalance", amount);
-    document.getElementById("balanceAmount").innerText = amount;
+    userBalance += amount;
+    localStorage.setItem("balance", userBalance);
+    document.querySelector(".balance-section p").innerHTML = `💰 ${userBalance} ≈ <b>৳${userBalance / 100}</b>`;
 }
 
-// উদাহরণ: যদি ইউজার ১০০ কয়েন ব্যবহার করে তাহলে ব্যালেন্স কমবে
-function deductCoins(coins) {
-    let currentBalance = parseInt(localStorage.getItem("userBalance") || 10500);
-    if (currentBalance >= coins) {
-        let newBalance = currentBalance - coins;
-        updateBalance(newBalance);
-    } else {
-        alert("অপর্যাপ্ত ব্যালেন্স!");
-    }
-}
+// 🎯 ডেমো টেস্টের জন্য ব্যালেন্স যোগ করার একটি বোতাম (পরীক্ষার জন্য)
+// Uncomment করলে ব্যালেন্স আপডেট হবে
+// updateBalance(500);
