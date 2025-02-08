@@ -1,65 +1,33 @@
-/* ব্যালেন্স সেকশনের ডিজাইন */
-.balance-section {
-    background: linear-gradient(135deg, #ffe6f2, #ff80b3);
-    padding: 15px;
-    border-radius: 12px;
-    text-align: center;
-    color: #fff;
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+/* 🌟 Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hind Siliguri', sans-serif;
 }
 
-/* ব্যালেন্স লেখা */
-.balance-section p {
-    font-size: 24px;
-    margin: 5px 0;
-}
-
-/* ব্যালেন্স আইকন */
-.balance-section p span {
-    font-weight: bold;
-    font-size: 30px;
-    color: #ff0066;
-}
-
-/* উইথড্র বাটন */
-.withdraw-button {
-    background-color: #ff3399;
-    color: white;
-    font-size: 18px;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.withdraw-button:hover {
-    background-color: #cc0066;
-}
-
-/* নোটিশ বোর্ড (ট্রেনের মত স্ক্রলিং) */
-.notice-board {
+/* 📢 Scrolling Notice Board (Train Effect) */
+.notice-container {
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
-    background: #ff80b3;
+    background: #ff3399;
     padding: 10px 0;
     color: white;
     font-size: 18px;
     font-weight: bold;
+    text-align: center;
     position: relative;
 }
 
-.notice-board p {
+.notice-track {
     display: inline-block;
     padding-left: 100%;
     animation: marquee 8s linear infinite;
 }
 
-/* স্ক্রলিং এনিমেশন */
 @keyframes marquee {
     from {
         transform: translateX(100%);
@@ -67,4 +35,84 @@
     to {
         transform: translateX(-100%);
     }
+}
+
+/* 🎀 Header */
+header {
+    text-align: center;
+    background: #ff0066;
+    color: white;
+    padding: 15px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* 💰 Balance Section */
+.balance-section {
+    background: linear-gradient(135deg, #ffe6f2, #ff80b3);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 📢 Telegram Section */
+.telegram-section {
+    text-align: center;
+    margin: 20px;
+    padding: 15px;
+    background: #fff3f8;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.telegram-section p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff0066;
+}
+
+.join-btn {
+    display: inline-block;
+    background: #ff0066;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.join-btn:hover {
+    background: #cc0052;
+}
+
+/* 📌 Bottom Navigation */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    background: #ff3399;
+    padding: 12px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+
+.bottom-nav a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.bottom-nav a:hover {
+    text-decoration: underline;
 }
